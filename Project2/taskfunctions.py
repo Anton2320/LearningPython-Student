@@ -1,30 +1,22 @@
 import numpy as np
 
-def main():
-    np.set_printoptions(threshold=np.inf)
-    np.random.seed(444)
-    exec_first()
-    exec_second()
-
-if __name__ == "__main__":
-    main()
-
-
 def exec_first():
     x = np.random.randint(20, size=100)
     print(x)
 
 def exec_second():
     second_array = []
+    print("Enter number or e to exit: ")
     while(True):
-        try:
-            value=int(input("Enter number "))
-        except:
-            print("Not a number")
-        second_array.append(value)
-        key.lower=input("exit (y/n): ")
-        if key == "y":
+        key=input()
+        if key.lower=="e":
             break
+        else:
+            try:
+                value = int(key)
+            except:
+                print("Not a number")
+        second_array.append(value)
     second_arraynp = np.array(second_array)
     second_arraynpodd = second_arraynp[second_arraynp%2==1]
     second_arraynpeven = second_arraynp[second_arraynp%2==0]
