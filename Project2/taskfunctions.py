@@ -9,7 +9,7 @@ def exec_second():
     print("Enter number or e to exit: ")
     while(True):
         key=input()
-        if key.lower=="e":
+        if key.lower()=="e":
             break
         else:
             try:
